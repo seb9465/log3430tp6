@@ -42,6 +42,7 @@ public class TP6 {
 		listeEntiers2.add(1);
 		listeEntiers2.add(5);
 		listeEntiers2.add(5);
+		listeEntiers2.add(6);
 	}
 
 	@After
@@ -296,11 +297,11 @@ public class TP6 {
 
 	// ============== TESTS DE LA CLASSE SETCALCULATOR ==============
 	
-//	StringBuilder stringContent = new StringBuilder();
-//	
-//	for(int i = 0; i < resultat.getSize(); i++){
-//		stringContent.append(" " + resultat.getAt(i));
-//	}	
-//	
-//	System.out.println("My List : " + stringContent);
+	/**
+	 * De part les tests ci-haut, la classe setCalculator est egalement testee.
+	 * Avec le rapport de coverage, on voit deja une couverture de 100% de la classe.
+	 * Pour s'assurer du bon fonctionnement de cette classe, nous avons ajoute
+	 * un assert pour chacun des tests ci-haut. Cela nous confirme un peu mieux
+	 * le bon fonctionnement de la classe SetCalculator.
+	 */
 }
