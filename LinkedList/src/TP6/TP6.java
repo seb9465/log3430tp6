@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.junit.After;
 import org.junit.Before;
@@ -64,6 +66,10 @@ public class TP6 {
 		
 		ArrayList<Object> resultatUnion = resultat.getAt(2);
 		assertTrue("Les valeurs du resultat de l'union devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatUnion);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'union.", 
+				resultatUnion.size() == unHashSet.size());
 	}
 	
 	/**
@@ -82,6 +88,10 @@ public class TP6 {
 		
 		ArrayList<Object> resultatUnion = resultat.getAt(2);
 		assertTrue("Les valeurs du resultat de l'union devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatUnion);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'union.", 
+				resultatUnion.size() == unHashSet.size());
 	}
 	
 	/**
@@ -98,8 +108,13 @@ public class TP6 {
 		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
-		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de l'intersection devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		ArrayList<Object> resultatIntersection = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de l'intersection devrait etre en ordre croissant.",
+				resultatIntersection.get(0).hashCode() < resultatIntersection.get(resultatIntersection.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatIntersection);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'intersection.", 
+				resultatIntersection.size() == unHashSet.size());
 	}
 	
 	/**
@@ -116,8 +131,13 @@ public class TP6 {
 		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
-		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de l'intersection devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		ArrayList<Object> resultatIntersection = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de l'intersection devrait etre en ordre decroissant.",
+				resultatIntersection.get(0).hashCode() > resultatIntersection.get(resultatIntersection.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatIntersection);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'intersection.", 
+				resultatIntersection.size() == unHashSet.size());
 	}
 	
 	/**
