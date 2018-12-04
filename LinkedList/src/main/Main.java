@@ -10,6 +10,8 @@ public class Main {
 		ArrayList<Object> val1 = new ArrayList<Object>();
 		ArrayList<Object> val2 = new ArrayList<Object>();
 
+		val1.add(10);
+		val1.add(25);
 		val1.add(4);
 		val1.add(1);
 		val1.add(1);
@@ -20,11 +22,17 @@ public class Main {
 		val2.add(5);
 		val2.add(5);
 		
+		val1.add(1);
+		val1.add(3);
+		
+		val2.add(2);
+		val2.add(3);
+		
 		//////////////////////// Linked List ///////////////////////	
 		MyListInterface list = new MyList();	
 		LinkedListInterface suiteChainee = new LinkedList();
 
-		list = suiteChainee.build(Operator.UNION, val1, val2);
+		list = suiteChainee.build(1, val1, val2, true);
 		
         //////////////////////// Display Result ///////////////////////	
 		StringBuilder stringContent = new StringBuilder();
