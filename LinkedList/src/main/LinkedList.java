@@ -14,9 +14,7 @@ import java.util.Set;
 
 public class LinkedList implements LinkedListInterface {
 
-	public MyListInterface build(int op, ArrayList<Object> val1, ArrayList<Object> val2, boolean tri) throws IOException{
-
-
+	public MyListInterface build(int op, ArrayList<Object> val1, ArrayList<Object> val2, boolean tri) throws IOException {
 		StringBuilder chaineContent=new StringBuilder();
 
 		MyListInterface list = new MyList();	
