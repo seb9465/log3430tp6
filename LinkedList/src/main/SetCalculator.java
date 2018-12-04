@@ -41,19 +41,4 @@ public class SetCalculator implements SetCalculatorInterface {
 		tmpB = intersection(setA, setB);
 		return difference(tmpA, tmpB);
 	}
-
-	@SuppressWarnings("unchecked")
-	public <T> ArrayList<T> isSubset(ArrayList<Object> setA, ArrayList<Object> setB) {
-		ArrayList<T> tmp = new ArrayList<T>();
-		tmp.add((T) String.valueOf(setB.containsAll(setA)));
-		return tmp;
-	}
-
-	@SuppressWarnings("unchecked")
-	public <T> ArrayList<T> isSuperset(ArrayList<Object> setA, ArrayList<Object> setB) {
-		ArrayList<T> tmp = new ArrayList<T>(); 
-		tmp.add((T) String.valueOf(setA.containsAll(setB)));
-		return tmp;
-	}
-
 }
