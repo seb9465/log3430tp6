@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class LinkedList implements LinkedListInterface {
 
-	public MyListInterface build(Operator op, ArrayList<Object> val1, ArrayList<Object> val2) throws IOException{
+	public MyListInterface build(Operator op, ArrayList<Object> val1, ArrayList<Object> val2, boolean tri) throws IOException{
 
 
 		StringBuilder chaineContent=new StringBuilder();
@@ -50,19 +50,6 @@ public class LinkedList implements LinkedListInterface {
 
 		case SYMMETRIC_DIFFERENCE:{
 			list.add(myCalculator.symDifference(list.getAt(i-1), list.getAt(i)));
-			i++;
-			chaineContent.append(" " + list.getAt(i));
-		}; break;
-
-		case IS_SUBSET:{
-			list.add(myCalculator.isSubset(list.getAt(i-1), list.getAt(i)));
-			i++;
-			chaineContent.append(" " + list.getAt(i)); 
-
-		}; break; 
-
-		case IS_SUPERSET: {
-			list.add(myCalculator.isSuperset(list.getAt(i-1), list.getAt(i)));
 			i++;
 			chaineContent.append(" " + list.getAt(i));
 		}; break;
