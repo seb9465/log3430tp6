@@ -154,8 +154,13 @@ public class TP6 {
 		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
-		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de la difference devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		ArrayList<Object> resultatDifference = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference devrait etre en ordre croissant.",
+				resultatDifference.get(0).hashCode() < resultatDifference.get(resultatDifference.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatDifference);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference.", 
+				resultatDifference.size() == unHashSet.size());
 	}
 	
 	/**
@@ -172,8 +177,13 @@ public class TP6 {
 		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
-		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de la difference devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		ArrayList<Object> resultatDifference = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference devrait etre en ordre decroissant.",
+				resultatDifference.get(0).hashCode() > resultatDifference.get(resultatDifference.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatDifference);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference.", 
+				resultatDifference.size() == unHashSet.size());
 	}
 	
 	/**
@@ -190,8 +200,13 @@ public class TP6 {
 		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
-		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de la difference symetrique devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		ArrayList<Object> resultatDifferenceSym = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference symetrique devrait etre en ordre croissant.",
+				resultatDifferenceSym.get(0).hashCode() < resultatDifferenceSym.get(resultatDifferenceSym.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatDifferenceSym);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference symetrique.", 
+				resultatDifferenceSym.size() == unHashSet.size());
 	}
 	
 	/**
@@ -208,8 +223,13 @@ public class TP6 {
 		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
-		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de la difference symetrique devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		ArrayList<Object> resultatDifferenceSym = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference symetrique devrait etre en ordre decroissant.",
+				resultatDifferenceSym.get(0).hashCode() > resultatDifferenceSym.get(resultatDifferenceSym.size() - 1).hashCode());
+		
+		Set<Object> unHashSet = new HashSet<Object>(resultatDifferenceSym);
+		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference symetrique.", 
+				resultatDifferenceSym.size() == unHashSet.size());
 	}
 	
 	/**
