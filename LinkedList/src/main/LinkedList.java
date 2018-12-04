@@ -63,7 +63,7 @@ public class LinkedList implements LinkedListInterface {
 		}
 		
 		ArrayList<Object> listeCourante = retirerDoublons(list, i);
-		listeCourante = sort(listeCourante, tri);
+		listeCourante = trier(listeCourante, tri);
 		list.setAt(listeCourante, i);
 		
 		return list;
@@ -80,12 +80,12 @@ public class LinkedList implements LinkedListInterface {
 		return listeCourante;
 	}
 	
-	public ArrayList<Object> sort(ArrayList<Object> liste, boolean tri) {
-	    Comparator<Object> c = tri ? 
+	public ArrayList<Object> trier(ArrayList<Object> liste, boolean tri) {
+	    Comparator<Object> comparateur = tri ? 
 	    			new CompareObjectCroissant() :
 	    			new CompareObjectDecroissant();
 	    
-	    liste.sort(c);
+	    liste.sort(comparateur);
 	    
 	    return liste;
 	}
