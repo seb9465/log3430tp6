@@ -99,10 +99,98 @@ public class TP6 {
 		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
 		
 		ArrayList<Object> resultatUnion = resultat.getAt(2);
-		assertTrue("Les valeurs du resultat de l'union devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+		assertTrue("Les valeurs du resultat de l'intersection devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
 	}
 	
+	/**
+	 * Classe : LinkedList
+	 * Methode : build
+	 * 		- Operator 	: INTERSECTION
+	 * 		- Tri		: Decroissant
+	 * La liste chainee devrait avoir des valeurs decroissantes.
+	 */
+	@Test
+	public void test4() throws IOException {
+		MyListInterface resultat = uneListeChainee.build(2, listeEntiers1, listeEntiers2, false);
+		
+		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
+		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
+		
+		ArrayList<Object> resultatUnion = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de l'intersection devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+	}
 	
+	/**
+	 * Classe : LinkedList
+	 * Methode : build
+	 * 		- Operator 	: DIFFERENCE
+	 * 		- Tri		: Croissant
+	 * La liste chainee devrait avoir des valeurs croissantes.
+	 */
+	@Test
+	public void test5() throws IOException {
+		MyListInterface resultat = uneListeChainee.build(3, listeEntiers1, listeEntiers2, true);
+		
+		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
+		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
+		
+		ArrayList<Object> resultatUnion = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+	}
+	
+	/**
+	 * Classe : LinkedList
+	 * Methode : build
+	 * 		- Operator 	: DIFFERENCE
+	 * 		- Tri		: Decroissant
+	 * La liste chainee devrait avoir des valeurs decroissantes.
+	 */
+	@Test
+	public void test6() throws IOException {
+		MyListInterface resultat = uneListeChainee.build(3, listeEntiers1, listeEntiers2, false);
+		
+		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
+		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
+		
+		ArrayList<Object> resultatUnion = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+	}
+	
+	/**
+	 * Classe : LinkedList
+	 * Methode : build
+	 * 		- Operator 	: SYMMETRIC_DIFFERENCE
+	 * 		- Tri		: Croissant
+	 * La liste chainee devrait avoir des valeurs croissantes.
+	 */
+	@Test
+	public void test7() throws IOException {
+		MyListInterface resultat = uneListeChainee.build(4, listeEntiers1, listeEntiers2, true);
+		
+		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
+		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
+		
+		ArrayList<Object> resultatUnion = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference symetrique devrait etre en ordre croissant.", resultatUnion.get(0).hashCode() < resultatUnion.get(resultatUnion.size() - 1).hashCode());
+	}
+	
+	/**
+	 * Classe : LinkedList
+	 * Methode : build
+	 * 		- Operator 	: SYMMETRIC_DIFFERENCE
+	 * 		- Tri		: Decroissant
+	 * La liste chainee devrait avoir des valeurs decroissantes.
+	 */
+	@Test
+	public void test8() throws IOException {
+		MyListInterface resultat = uneListeChainee.build(4, listeEntiers1, listeEntiers2, false);
+		
+		assertNotNull("Le resultat ne devrait pas etre null.", resultat);
+		assertEquals("Le resultat devrait contenir trois tableaux.", 3, resultat.getSize());
+		
+		ArrayList<Object> resultatUnion = resultat.getAt(2);
+		assertTrue("Les valeurs du resultat de la difference symetrique devrait etre en ordre decroissant.", resultatUnion.get(0).hashCode() > resultatUnion.get(resultatUnion.size() - 1).hashCode());
+	}
 	
 	/**
 	 * Classe : LinkedList
@@ -160,6 +248,14 @@ public class TP6 {
 		assertEquals("Le resultat devrait contenir deux tableaux puisque l'operateur n'existe pas.", 2, resultat.getSize());
 	}
 	
+	/**
+	 * Les tests ci-haut couvrent l'entierete de la classe LinkedList.
+	 * C'est-a-dire que par les tests de la fonction build, les methodes retirerDoublons et trier
+	 * sont egalement testees.
+	 */
+
+	// ============== TESTS DE LA CLASSE SETCALCULATOR ==============
+	
 //	StringBuilder stringContent = new StringBuilder();
 //	
 //	for(int i = 0; i < resultat.getSize(); i++){
@@ -167,7 +263,4 @@ public class TP6 {
 //	}	
 //	
 //	System.out.println("My List : " + stringContent);
-
-	// ============== TESTS DE LA CLASSE SETCALCULATOR ==============
-	
 }
