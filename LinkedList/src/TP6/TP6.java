@@ -71,6 +71,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatUnion);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'union.", 
 				resultatUnion.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 7, resultatUnion.size());
 	}
 	
 	/**
@@ -93,6 +95,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatUnion);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'union.", 
 				resultatUnion.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 7, resultatUnion.size());
 	}
 	
 	/**
@@ -116,6 +120,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatIntersection);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'intersection.", 
 				resultatIntersection.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 2, resultatIntersection.size());
 	}
 	
 	/**
@@ -139,6 +145,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatIntersection);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de l'intersection.", 
 				resultatIntersection.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 2, resultatIntersection.size());
 	}
 	
 	/**
@@ -162,6 +170,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatDifference);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference.", 
 				resultatDifference.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 4, resultatDifference.size());
 	}
 	
 	/**
@@ -185,6 +195,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatDifference);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference.", 
 				resultatDifference.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 4, resultatDifference.size());
 	}
 	
 	/**
@@ -208,6 +220,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatDifferenceSym);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference symetrique.", 
 				resultatDifferenceSym.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 5, resultatDifferenceSym.size());
 	}
 	
 	/**
@@ -231,6 +245,8 @@ public class TP6 {
 		Set<Object> unHashSet = new HashSet<Object>(resultatDifferenceSym);
 		assertTrue("Il ne devrait pas existe de valeurs dupliquees dans le tableau des resultats de la difference symetrique.", 
 				resultatDifferenceSym.size() == unHashSet.size());
+		
+		assertEquals("Le tableau de resultat de l'operateur devrait avoir la bonne taille.", 5, resultatDifferenceSym.size());
 	}
 	
 	/**
